@@ -3,6 +3,8 @@ import torch
 import os
 import tqdm
 import PIL.Image as Image
+if not hasattr(Image, "LINEAR"):
+    Image.LINEAR = Image.BILINEAR
 import numpy as np
 import segmentation_refinement as refine
 from tqdm import tqdm
